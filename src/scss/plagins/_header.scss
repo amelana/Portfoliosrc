@@ -1,0 +1,50 @@
+.header {
+  background-color: black;
+
+&__burger{
+  
+}
+ 
+ 
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    text-transform: uppercase;
+    display: block;
+    color: $white;
+    font-size: 16px;
+    margin: 0 22px;
+    padding: 28px 0  24px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      border-bottom: 4px solid $white;
+    }
+  }
+}
+
+.login-button {
+  text-transform: uppercase;
+  background: url("../../img/login.png") no-repeat 0 50%;
+  display: block;
+  color: $white;
+  padding: 28px 0 24px 32px;
+  font-size: 16px;
+
+}

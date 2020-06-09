@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+   max-width: 100%;
+}
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  font:700 14px/1 'PT Sans Narrow', Arial, Tahoma, Verdana, sans-serif;
+  background: $black url("../../img/bg.jpg") no-repeat 50% 0;
+  background-size: 100% auto;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.title30 {
+  font-size: 30px;
+  color: $black;
+  text-transform: uppercase;
+
+  &--white {
+    @extend .title30;
+    color: $white;
+  }
+}
+
+.divider {
+  width: 20px;
+  height: 20px;
+  margin: 22px 0 30px;
+  background: $white;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.button{
+  background: $black;
+  color:$white;
+  font-size: 14px;
+  padding: 20px;
+  min-width: 140px;
+  margin: 0;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  border:0px;
+  }
+
+.border{
+  padding: 7px;
+  background-color: $white;
+}
+
+
+input[type="checkbox"]{
+  display: none;
+
+  & + label{
+    padding-left: 32px;
+    position: relative;
+
+    &:before{
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 2px solid $black;
+      position: absolute;
+      background:#f9f6f3;
+      left:0;
+      top:-3px;
+      box-sizing:border-box;
+    }
+  }
+
+  &:checked{
+
+    & + label{
+
+      &:before{
+        background-image: url("../../img/closess.svg");
+        background-size: 12px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.form-middle {
+
+}
+.form-save {}
+.forgot-password {}
+
+
