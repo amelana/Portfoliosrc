@@ -22,6 +22,12 @@ gulp.task('html', function () {
         .pipe(browserSync.stream());
 });
 
+gulp.task('files', function () {
+    return gulp.src('src/files/*')
+        .pipe(gulp.dest('build/files'));
+});
+
+
 gulp.task('scripts', function () {
   return gulp.src('src/js/**/*.js')
       .pipe(sourcemaps.init())
@@ -82,7 +88,7 @@ gulp.task('watch', function () {
 gulp.task('build',
     gulp.series(
         'cleanBuild',
-        gulp.parallel('html', 'scripts', 'scss', 'fonts', 'img'))
+        gulp.parallel('html', 'scripts', 'scss', 'fonts', 'img', 'files'))
     );
 
 gulp.task('default', gulp.series('build', 'watch'));
